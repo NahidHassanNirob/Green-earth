@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green-Earth</title>
+    <!-- deisy ui & tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body class="bg-[#F0FDF4]">
+
+    <!-- navbar -->
+    <header class="bg-[#15803D]">
+        <div class="navbar text-white shadow-sm w-11/12 mx-auto ">
+            <div class="navbar-start ">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost sm:hidden -ml-4 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-b-md z-1 mt-3 w-52 p-2 shadow bg-[#15803D]">
+                        <li><a>About</a></li>
+                        <li><a>Gallery</a></li>
+
+                        <li><a>Plant a tree</a></li>
+                    </ul>
+                </div>
+                <a class="btn-ghost sm:text-2xl font-bold">Green-Earth</a>
+            </div>
+            <div class="navbar-center hidden sm:block lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>About</a></li>
+                    <li><a>Gallery</a></li>
+
+                    <li><a>Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn rounded-3xl bg-[#FACC15] text-[#15803D] border-none">
+                    Plant a Tree
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section
+        class="flex px-4 sm:px-0 flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 relative bg-[#CFF0DC] pt-4 sm:pb-0 pb-4">
+        <div class="hidden sm:block">
+            <img src="assets/hero-leaf1.png" alt="" />
+        </div>
+        <div class="flex justify-between items-center sm:hidden">
+            <div><img src="assets/hero-leaf1.png" alt="" /></div>
+            <div><img src="assets/hero-leaf2.png" alt="" /></div>
+        </div>
+        <div class="text-center">
+            <h2 class="lg:text-[25px] md:text-xl font-bold">
+                Plant a Tree, Grow a Future
+            </h2>
+            <p class="sm:text-[16px] text-[14px] opacity-80 my-2">
+                Join our mission to plant 1 million trees and make the Earth greener
+                for future generations.
+            </p>
+            <button class="btn rounded-3xl bg-[#FACC15] text-[#15803D]">
+                Get Involved
+            </button>
+        </div>
+        <div class="hidden sm:block">
+            <img class="" src="assets/hero-leaf2.png" alt="" />
+        </div>
+    </section>
+
+    <!-- main section -->
+    <main>
+
+        <!-- Choose Your Trees -->
+        <h2 class="text-center text-[25px] font-semibold my-3">
+            Choose Your Trees
+        </h2>
+        <section class="sm:flex justify-between w-11/12 mx-auto gap-4">
+
+            <div id="card" class="sm:w-1/6 bg-white p-2 w-full h-max order-1 sm:order-3">
+                <h2 class="font-semibold text-xl">Cart</h2>
+                <div class="flex justify-between items-center bg-[#F0FDF4] p-2 rounded-md mt-2">
+                    <div>
+                        <h2>mango tree</h2>
+                        <h2 class="flex items-center text-[#8C8C8C]">
+                            <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span>
+                        </h2>
+                    </div>
+                    <i class="fa-solid fa-xmark text-[#8C8C8C]"></i>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <h2 class="font-semibold">Total</h2>
+                    <h2 class="flex items-center text-[#8C8C8C] font-semibold">
+                        <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span>
+                    </h2>
+                </div>
+            </div>
+
+
+            <div id="Categories" class="p-2 bg-[#F0FDF4] w-1/6 order-2 sm:order-1">
+                <h2 class="text-xl font-semibold">Categories</h2>
+                <div id="all-Categories-container">
+                    <ul>
+                        <li
+                            class="hover:bg-[#15803D] hover:text-white cursor-pointer py-2 rounded-md text-[16px] pl-2 w-[100%] hover:transition-all">
+                            Home
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="all-crads" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full order-3 sm:order-2">
+
+                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
+                    <figure>
+                        <img class="rounded-md"
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" />
+                    </figure>
+                    <div class="card-body p-0">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="text-justify">
+                            A card component has a figure, a body part, and inside body
+                            there are title and actions parts
+                        </p>
+                        <div class="card-actions flex justify-between">
+                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
+                                Fashion
+                            </div>
+                            <h2 class="font-semibold">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
+                            </h2>
+                        </div>
+                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
+                    <figure>
+                        <img class="rounded-md"
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" />
+                    </figure>
+                    <div class="card-body p-0">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="text-justify">
+                            A card component has a figure, a body part, and inside body
+                            there are title and actions parts
+                        </p>
+                        <div class="card-actions flex justify-between">
+                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
+                                Fashion
+                            </div>
+                            <h2 class="font-semibold">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
+                            </h2>
+                        </div>
+                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
+                    <figure>
+                        <img class="rounded-md"
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" />
+                    </figure>
+                    <div class="card-body p-0">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="text-justify">
+                            A card component has a figure, a body part, and inside body
+                            there are title and actions parts
+                        </p>
+                        <div class="card-actions flex justify-between">
+                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
+                                Fashion
+                            </div>
+                            <h2 class="font-semibold">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
+                            </h2>
+                        </div>
+                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- About the Campaign -->
+<section class="w-full sm:w-4/6 mx-auto py-11">
+    <h2 class="text-[25px] font-semibold text-center mb-4">
+        About the Campaign
+    </h2>
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+        <!-- Image -->
+        <div class="sm:w-1/2 w-full">
+            <img src="assets/about.png" alt="" class="w-full rounded-md" />
+        </div>
+        <!-- Text -->
+        <div class="sm:w-1/2 w-full opacity-80 p-3 sm:p-0">
+            <p class="text-[16px]">
+                Green Earth is a global tree plantation initiative dedicated to
+                fighting climate change. Since our start, we’ve planted over
+                500,000 trees worldwide. By joining our campaign, you help restore
+                forests, create habitats for wildlife, and combat global warming.
+            </p>
+            <ul class="ml-6 mt-3 list-disc text-[16px] space-y-1">
+                <li>Restoration of natural habitats</li>
+                <li>Improvement of air quality</li>
+                <li>Support for local communities</li>
+            </ul>
+        </div>
+    </div> 
+</section>
+
+    </main>
+
+
+    <!-- Our Impact -->
+    <section class="bg-[#CFF0DC]">
+        <div class="w-11/12 mx-auto py-9">
+            <h2 class="text-center mb-4 text-[25px] t] font-semibold">
+                Our Impact
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-between gap-6">
+                <div
+                    class="bg-white text-center mx-auto sm:w-1/3 w-[70%] rounded-lg py-5 hover:scale-105 transition-all cursor-pointer">
+                    <h2 class="text-[#15803D] font-semibold text-3xl">500K+</h2>
+                    <h3 class="text-[#1F2937] text-[16px] opacity-80">Trees Planted</h3>
+                </div>
+                <div
+                    class="bg-white text-center mx-auto sm:w-1/3 w-[70%] rounded-lg py-5 hover:scale-105 transition-all cursor-pointer">
+                    <h2 class="text-[#15803D] font-semibold text-3xl">120+</h2>
+                    <h3 class="text-[#1F2937] text-[16px] opacity-80">
+                        Communities Involved
+                    </h3>
+                </div>
+                <div
+                    class="bg-white text-center mx-auto sm:w-1/3 w-[70%] rounded-lg py-5 hover:scale-105 transition-all cursor-pointer">
+                    <h2 class="text-[#15803D] font-semibold text-3xl">30+</h2>
+                    <h3 class="text-[#1F2937] text-[16px] opacity-80">
+                        Countries Reached
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- donate -->
+    <section class="bg-[#166534]">
+        <div class="w-11/12 mx-auto py-9">
+            <h2 class="text-center text-[25px] font-semibold mb-4 text-white">
+                Plant a Tree Today
+            </h2>
+
+            <div class="flex justify-center">
+                <fieldset
+                    class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 bg-[#15803D] border-none">
+                    <input type="text" class="input" placeholder="Name" />
+
+                    <input type="email" class="input" placeholder="Email" />
+                    <fieldset class="fieldset">
+                        <select class="select">
+                            <option disabled selected>Numbers of trees</option>
+                            <option>Chrome</option>
+                            <option>FireFox</option>
+                            <option>Safari</option>
+                        </select>
+                    </fieldset>
+
+                    <button class="btn mt-4 bg-[#FACC15] border-none text-[#15803D] ">Donate Now</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class=" bg-[#14532D] text-white text-center p-4">
+
+        <p>© 2025 Green Earth. All Rights Reserved.</p>
+
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
