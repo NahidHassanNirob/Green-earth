@@ -19,13 +19,12 @@
 </head>
 
 <body class="bg-[#F0FDF4]">
-
     <!-- navbar -->
     <header class="bg-[#15803D]">
-        <div class="navbar text-white shadow-sm w-11/12 mx-auto ">
-            <div class="navbar-start ">
+        <div class="navbar text-white w-11/12 mx-auto">
+            <div class="navbar-start">
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost sm:hidden -ml-4 ">
+                    <div tabindex="0" role="button" class="btn btn-ghost sm:hidden -ml-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,21 +86,20 @@
 
     <!-- main section -->
     <main>
-        <section id="spinner" class="flex items-center justify-center py-10 hidden">
+        <!-- deisyui customi... -->
+
+        <section id="spinner" class="fixed inset-0 flex items-center justify-center bg-white/50 z-50 hidden">
             <span class="loading loading-bars loading-xl"></span>
         </section>
 
-        <!-- Choose Your Trees -->
-        <h2 class="text-center text-[25px] font-semibold my-3">
+        <h2 class="text-center text-[25px] font-semibold mb-3 mt-5">
             Choose Your Trees
         </h2>
-        <section class="sm:flex justify-between w-11/12 mx-auto gap-4">
-
-            <div id="add-to-card" class="sm:w-1/6 bg-white p-2  w-full h-max order-1 sm:order-3">
+        <section id="categorie-section" class="sm:flex justify-between w-11/12 mx-auto gap-2 space-y-4 sm:space-y-0">
+            <!-- Cart -->
+            <div id="add-to-card" class="sm:w-1/5 bg-white p-2 w-full h-max order-1 sm:order-3">
                 <h2 class="font-semibold text-xl">Cart</h2>
-                <div id="card-container">
-
-                </div>
+                <div id="card-container"></div>
                 <div class="flex justify-between items-center mt-2">
                     <h2 class="font-semibold">Total</h2>
                     <h2 class="flex items-center text-[#8C8C8C] font-semibold">
@@ -110,67 +108,65 @@
                 </div>
             </div>
 
-
-            <div id="Categories" class="p-2 bg-[#F0FDF4] sm:w-1/6 w-full order-2 sm:order-1">
+            <!-- Categories -->
+            <div id="Categories" class="p-2 bg-[#F0FDF4] sm:w-1/5 w-full order-2 sm:order-1">
                 <h2 class="text-xl font-semibold">Categories</h2>
                 <div id="all-categories-container">
-
+                    <button id="all-plants-btn" onclick="allPlants()"
+                        class="all-plants-btn hover:bg-[#15803D] hover:text-white cursor-pointer py-2 rounded-md text-[16px] pl-2 w-full hover:transition-all categorie-btn mt-2 text-left">
+                        All Plants
+                    </button>
                 </div>
             </div>
 
-
-            <div id="all-plants-container"
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full order-3 sm:order-2"></div>
-        </section>
-
-
-
-
-
-        <!-- About the Campaign -->
-        <section class="w-full sm:w-4/6 mx-auto py-11">
-            <h2 class="text-[25px] font-semibold text-center mb-4">
-                About the Campaign
-            </h2>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
-
-                <div class="sm:w-1/2 w-full">
-                    <img src="assets/about.png" alt="" class="w-full rounded-md" />
+            <!-- Main content -->
+            <div class="w-full order-3 sm:order-2 sm:px-3 flex flex-col gap-8">
+                <!-- All Plants Container -->
+                <div id="all-plants-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
                 </div>
 
-                <div class="sm:w-1/2 w-full opacity-80 p-3 sm:p-0">
-                    <p class="text-[16px]">
-                        Green Earth is a global tree plantation initiative dedicated to
-                        fighting climate change. Since our start, we’ve planted over
-                        500,000 trees worldwide. By joining our campaign, you help restore
-                        forests, create habitats for wildlife, and combat global warming.
-                    </p>
-                    <ul class="ml-6 mt-3 list-disc text-[16px] space-y-1">
-                        <li>Restoration of natural habitats</li>
-                        <li>Improvement of air quality</li>
-                        <li>Support for local communities</li>
-                    </ul>
-                </div>
+                <!-- About the Campaign -->
+                <section class="w-full mx-auto pb-11">
+                    <h2 class="text-[25px] font-semibold text-center mb-4">
+                        About the Campaign
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center w-full">
+                        <div>
+                            <img src="assets/about.png" alt="" class="w-full rounded-md" />
+                        </div>
+                        <div class="opacity-80">
+                            <p class="text-[16px] text-justify">
+                                Green Earth is a global tree plantation initiative dedicated
+                                to fighting climate change. Since our start, we’ve planted
+                                over 500,000 trees worldwide. By joining our campaign, you
+                                help restore forests, create habitats for wildlife, and combat
+                                global warming.
+                            </p>
+                            <ul class="ml-6 mt-3 list-disc text-[16px] space-y-1">
+                                <li>Restoration of natural habitats</li>
+                                <li>Improvement of air quality</li>
+                                <li>Support for local communities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
-
     </main>
 
-    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle ">
-        <div class="modal-box ">
-            <div id="modal-container" class="">
-
-
-            </div>
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-container" class=""></div>
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn bg-[#15803D]  text-white text-[14px] ">Close</button>
+                    <button class="btn bg-[#15803D] text-white text-[14px]">
+                        Close
+                    </button>
                 </form>
             </div>
         </div>
     </dialog>
-
 
     <!-- Our Impact -->
     <section class="bg-[#CFF0DC]">
@@ -223,21 +219,20 @@
                             <option>3</option>
                             <option>4</option>
                             <option>More than 4</option>
-
                         </select>
                     </fieldset>
 
-                    <button class="btn mt-4 bg-[#FACC15] border-none text-[#15803D] ">Donate Now</button>
+                    <button class="btn mt-4 bg-[#FACC15] border-none text-[#15803D]">
+                        Donate Now
+                    </button>
                 </fieldset>
             </div>
         </div>
     </section>
 
     <!-- footer -->
-    <footer class=" bg-[#14532D] text-white text-center p-4">
-
+    <footer class="bg-[#14532D] text-white text-center p-4">
         <p>© 2025 Green Earth. All Rights Reserved.</p>
-
     </footer>
 
     <script src="js/index.js"></script>

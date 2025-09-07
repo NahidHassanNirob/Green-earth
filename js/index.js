@@ -2,6 +2,7 @@ const manageSpinner = (status) => {
   if (status == true) {
     document.getElementById("spinner").classList.remove("hidden");
     document.getElementById("all-plants-container").classList.add("hidden");
+    
   } else {
     document.getElementById("all-plants-container").classList.remove("hidden");
     document.getElementById("spinner").classList.add("hidden");
@@ -19,9 +20,18 @@ const allPlants = () => {
       displayAllPlants(data.plants);
       manageSpinner(false);
     });
+
+    const categorieBtn = document.querySelectorAll(".categorie-btn");
+
+      for (const btn of categorieBtn) {
+        btn.classList.remove("active");
+      }
+      document.getElementById('all-plants-btn').classList.add('all-plants-btn')
+      
   
 };
 allPlants();
+
 
 // display all defult plants
 const displayAllPlants = (plants) => {
@@ -85,7 +95,7 @@ const displayAllCategories = (categories) => {
   for (const item of categories) {
     const creatUl = document.createElement("ul");
     creatUl.innerHTML = `
-    <ul class="w-full">
+    <ul class="w-full ">
 
 
     
@@ -112,6 +122,7 @@ const plantsByCategories = (plants) => {
       for (const btn of categorieBtn) {
         btn.classList.remove("active");
       }
+      document.getElementById('all-plants-btn').classList.remove('all-plants-btn')
       const activeBtn = document.getElementById(`click-btn${plants}`);
       activeBtn.classList.add("active");
      manageSpinner(false);
@@ -174,9 +185,9 @@ const displayCard = (card) => {
   creatEl.innerHTML = `
    <div class="flex justify-between gap-2 items-center bg-[#F0FDF4] p-2 rounded-md mt-2">
         <div>
-            <h2>${card.name}</h2>
+            <h2 class="text-[14px]">${card.name}</h2>
             <h2 class="flex items-center text-[#8C8C8C]">
-                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>${card.price}</span>
+                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span class="text-[14px]">${card.price}</span>
             </h2>
         </div>
         <i onClick=" hideCard(${card.id}, ${card.price})" 
