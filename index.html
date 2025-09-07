@@ -87,6 +87,9 @@
 
     <!-- main section -->
     <main>
+        <section id="spinner" class="flex items-center justify-center py-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+        </section>
 
         <!-- Choose Your Trees -->
         <h2 class="text-center text-[25px] font-semibold my-3">
@@ -94,118 +97,30 @@
         </h2>
         <section class="sm:flex justify-between w-11/12 mx-auto gap-4">
 
-            <div id="card" class="sm:w-1/6 bg-white p-2 w-full h-max order-1 sm:order-3">
+            <div id="add-to-card" class="sm:w-1/6 bg-white p-2  w-full h-max order-1 sm:order-3">
                 <h2 class="font-semibold text-xl">Cart</h2>
-                <div class="flex justify-between items-center bg-[#F0FDF4] p-2 rounded-md mt-2">
-                    <div>
-                        <h2>mango tree</h2>
-                        <h2 class="flex items-center text-[#8C8C8C]">
-                            <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span>
-                        </h2>
-                    </div>
-                    <i class="fa-solid fa-xmark text-[#8C8C8C]"></i>
+                <div id="card-container">
+
                 </div>
                 <div class="flex justify-between items-center mt-2">
                     <h2 class="font-semibold">Total</h2>
                     <h2 class="flex items-center text-[#8C8C8C] font-semibold">
-                        <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>500</span>
+                        <i class="fa-solid fa-bangladeshi-taka-sign"></i><span id="price">0</span>
                     </h2>
                 </div>
             </div>
 
 
-            <div id="Categories" class="p-2 bg-[#F0FDF4] w-1/6 order-2 sm:order-1">
+            <div id="Categories" class="p-2 bg-[#F0FDF4] sm:w-1/6 w-full order-2 sm:order-1">
                 <h2 class="text-xl font-semibold">Categories</h2>
-                <div id="all-Categories-container">
-                    <ul>
-                        <li
-                            class="hover:bg-[#15803D] hover:text-white cursor-pointer py-2 rounded-md text-[16px] pl-2 w-[100%] hover:transition-all">
-                            Home
-                        </li>
-                    </ul>
+                <div id="all-categories-container">
+
                 </div>
             </div>
 
 
-            <div id="all-crads" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full order-3 sm:order-2">
-
-                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
-                    <figure>
-                        <img class="rounded-md"
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body p-0">
-                        <h2 class="card-title">Card Title</h2>
-                        <p class="text-justify">
-                            A card component has a figure, a body part, and inside body
-                            there are title and actions parts
-                        </p>
-                        <div class="card-actions flex justify-between">
-                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
-                                Fashion
-                            </div>
-                            <h2 class="font-semibold">
-                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
-                            </h2>
-                        </div>
-                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
-                    <figure>
-                        <img class="rounded-md"
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body p-0">
-                        <h2 class="card-title">Card Title</h2>
-                        <p class="text-justify">
-                            A card component has a figure, a body part, and inside body
-                            there are title and actions parts
-                        </p>
-                        <div class="card-actions flex justify-between">
-                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
-                                Fashion
-                            </div>
-                            <h2 class="font-semibold">
-                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
-                            </h2>
-                        </div>
-                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <div class="card bg-base-100 shadow-sm p-3 space-y-3">
-                    <figure>
-                        <img class="rounded-md"
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div class="card-body p-0">
-                        <h2 class="card-title">Card Title</h2>
-                        <p class="text-justify">
-                            A card component has a figure, a body part, and inside body
-                            there are title and actions parts
-                        </p>
-                        <div class="card-actions flex justify-between">
-                            <div class="badge rounded-xl font-semibold text-[#15803D] bg-[#DCFCE7] py-3">
-                                Fashion
-                            </div>
-                            <h2 class="font-semibold">
-                                <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>Price</span>
-                            </h2>
-                        </div>
-                        <button class="btn bg-[#15803D] w-full rounded-xl text-white">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-
-            </div>
+            <div id="all-plants-container"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full order-3 sm:order-2"></div>
         </section>
 
 
@@ -213,33 +128,48 @@
 
 
         <!-- About the Campaign -->
-<section class="w-full sm:w-4/6 mx-auto py-11">
-    <h2 class="text-[25px] font-semibold text-center mb-4">
-        About the Campaign
-    </h2>
-    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
-        <!-- Image -->
-        <div class="sm:w-1/2 w-full">
-            <img src="assets/about.png" alt="" class="w-full rounded-md" />
-        </div>
-        <!-- Text -->
-        <div class="sm:w-1/2 w-full opacity-80 p-3 sm:p-0">
-            <p class="text-[16px]">
-                Green Earth is a global tree plantation initiative dedicated to
-                fighting climate change. Since our start, we’ve planted over
-                500,000 trees worldwide. By joining our campaign, you help restore
-                forests, create habitats for wildlife, and combat global warming.
-            </p>
-            <ul class="ml-6 mt-3 list-disc text-[16px] space-y-1">
-                <li>Restoration of natural habitats</li>
-                <li>Improvement of air quality</li>
-                <li>Support for local communities</li>
-            </ul>
-        </div>
-    </div> 
-</section>
+        <section class="w-full sm:w-4/6 mx-auto py-11">
+            <h2 class="text-[25px] font-semibold text-center mb-4">
+                About the Campaign
+            </h2>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+
+                <div class="sm:w-1/2 w-full">
+                    <img src="assets/about.png" alt="" class="w-full rounded-md" />
+                </div>
+
+                <div class="sm:w-1/2 w-full opacity-80 p-3 sm:p-0">
+                    <p class="text-[16px]">
+                        Green Earth is a global tree plantation initiative dedicated to
+                        fighting climate change. Since our start, we’ve planted over
+                        500,000 trees worldwide. By joining our campaign, you help restore
+                        forests, create habitats for wildlife, and combat global warming.
+                    </p>
+                    <ul class="ml-6 mt-3 list-disc text-[16px] space-y-1">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
     </main>
+
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle ">
+        <div class="modal-box ">
+            <div id="modal-container" class="">
+
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-[#15803D]  text-white text-[14px] ">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
 
     <!-- Our Impact -->
@@ -288,9 +218,12 @@
                     <fieldset class="fieldset">
                         <select class="select">
                             <option disabled selected>Numbers of trees</option>
-                            <option>Chrome</option>
-                            <option>FireFox</option>
-                            <option>Safari</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>More than 4</option>
+
                         </select>
                     </fieldset>
 
@@ -306,7 +239,8 @@
         <p>© 2025 Green Earth. All Rights Reserved.</p>
 
     </footer>
-    <script src="./js/index.js"></script>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
