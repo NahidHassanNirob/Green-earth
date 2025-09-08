@@ -40,10 +40,3 @@ let name = "Nirob";
 let age = 19;
 let message = `Hello ${name}, you are ${age} years old.`;
 console.log(message);
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@ const manageSpinner = (status) => {
   if (status == true) {
     document.getElementById("spinner").classList.remove("hidden");
     document.getElementById("all-plants-container").classList.add("hidden");
-    
   } else {
     document.getElementById("all-plants-container").classList.remove("hidden");
     document.getElementById("spinner").classList.add("hidden");
@@ -19,19 +18,18 @@ const allPlants = () => {
     .then((data) => {
       displayAllPlants(data.plants);
       manageSpinner(false);
+      
     });
 
-    const categorieBtn = document.querySelectorAll(".categorie-btn");
+  const categorieBtn = document.querySelectorAll(".categorie-btn");
 
-      for (const btn of categorieBtn) {
-        btn.classList.remove("active");
-      }
-      document.getElementById('all-plants-btn').classList.add('all-plants-btn')
-      
+  for (const btn of categorieBtn) {
+    btn.classList.remove("active");
+  }
+  document.getElementById("all-plants-btn").classList.add("active");
   
 };
 allPlants();
-
 
 // display all defult plants
 const displayAllPlants = (plants) => {
@@ -58,7 +56,7 @@ const displayAllPlants = (plants) => {
                     ${plant.category}
                 </div>
                 <h2 class="font-semibold">
-                    <i class="fa-solid fa-bangladeshi-taka-sign"></i><span>${plant.price}</span>
+                    <i class="fa-solid fa-bangladeshi-taka-sign "></i><span>${plant.price}</span>
                 </h2>
             </div>
             <button onClick="addToCard(${plant.id})" class="btn bg-[#15803D] w-full rounded-xl text-white mt-3">
@@ -122,10 +120,10 @@ const plantsByCategories = (plants) => {
       for (const btn of categorieBtn) {
         btn.classList.remove("active");
       }
-      document.getElementById('all-plants-btn').classList.remove('all-plants-btn')
+      document.getElementById("all-plants-btn").classList.remove("active");
       const activeBtn = document.getElementById(`click-btn${plants}`);
       activeBtn.classList.add("active");
-     manageSpinner(false);
+      manageSpinner(false);
     });
 };
 
@@ -136,7 +134,7 @@ const loadPlantDetails = (id) => {
   fetch(url)
     .then((Response) => Response.json())
     .then((data) => {
-     displayPlantDetails(data.plants);
+      displayPlantDetails(data.plants);
       manageSpinner(false);
     });
 };
@@ -160,11 +158,11 @@ const displayPlantDetails = (plant) => {
                    <span class="font-bold">Price</span>: <i class="fa-solid fa-bangladeshi-taka-sign text-[#15803D]"></i><span class="text-[#15803D]">${plant.price}</span>
                 </h2>        
                 
-            <p class="text-justify line-clamp-3">
+            <p class="text-justify ">
                <span class="font-bold">Description</span>: <span class="text-[#15803D]">${plant.description}</span>
             </p>
-        </div>
-        <div>
+     </div>
+        
   `;
   document.getElementById("my_modal").showModal();
 };
@@ -194,7 +192,7 @@ const displayCard = (card) => {
            class="fa-solid fa-xmark text-[#8C8C8C] cursor-pointer"></i>
     </div>
   `;
-  alert(`${card.name} has been added on the cart`);
+  alert(`${card.name} Added to cart successfully!`);
   cardContainer.appendChild(creatEl);
 
   const priceElement = document.getElementById("price");
