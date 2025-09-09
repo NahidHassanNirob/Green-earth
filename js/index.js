@@ -18,7 +18,6 @@ const allPlants = () => {
     .then((data) => {
       displayAllPlants(data.plants);
       manageSpinner(false);
-      
     });
 
   const categorieBtn = document.querySelectorAll(".categorie-btn");
@@ -27,7 +26,6 @@ const allPlants = () => {
     btn.classList.remove("active");
   }
   document.getElementById("all-plants-btn").classList.add("active");
-  
 };
 allPlants();
 
@@ -94,11 +92,7 @@ const displayAllCategories = (categories) => {
     const creatUl = document.createElement("ul");
     creatUl.innerHTML = `
     <ul class="w-full ">
-
-
-    
-    
-                        <li id="click-btn${item.id}" onclick="plantsByCategories(${item.id})" class="hover:bg-[#15803D] hover:text-white cursor-pointer py-2 rounded-md text-[16px] pl-2 w-full hover:transition-all categorie-btn mt-2">
+                    <li id="click-btn${item.id}" onclick="plantsByCategories(${item.id})" class="hover:bg-[#15803D] hover:text-white cursor-pointer py-2 rounded-md text-[16px] pl-2 w-full hover:transition-all categorie-btn mt-2">
                             ${item.category_name}
                         </li>
                     </ul>
