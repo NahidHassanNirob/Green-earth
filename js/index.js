@@ -172,7 +172,7 @@ const addToCard = (plant) => {
 const displayCard = (card) => {
   const cardContainer = document.getElementById("card-container");
   const creatEl = document.createElement("div");
-  creatEl.id = "cart-item-" + card.id; // unique id দিলাম
+  creatEl.id = "cart-item-" + card.id; 
 
   creatEl.innerHTML = `
    <div class="flex justify-between gap-2 items-center bg-[#F0FDF4] p-2 rounded-md mt-2">
